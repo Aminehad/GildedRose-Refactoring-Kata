@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id "jacoco"
+    id 'checkstyle'
+    id 'pmd'
+    id 'com.github.spotbugs' version '4.7.5'
+    id 'info.solidsoft.pitest' version '1.7.4'
+}
+
+group = 'com.gildedrose'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+  useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    pitest 'org.pitest:pitest-junit5-plugin:0.12'
+
+
+
+}
+
+tasks.withType(JavaCompile) {
+  options.encoding = "UTF-8"
+  options.compilerArgs += ["-Xlint:all", "-Xlint:-serial"]
+}
+
+
+tasks.withType(Checkstyle) {
+  reports {
+    xml.required = false
+    html.required = true
+    html.stylesheet resources.text.fromFile('config/checkstyle/checkstyle.xsl')
+  }
+}
+
+pmd {
+  ignoreFailures = true
+}
+
+wrapper {
+    gradleVersion = '7.2'
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 1.0
+            }
+        }
+    }
+}
