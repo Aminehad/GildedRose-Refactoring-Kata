@@ -383,7 +383,4 @@ class GildedRoseTest {
     app.updateQuality();
     assertThat(element.sellIn, is(sellin));
   }
-
-
-
 }
