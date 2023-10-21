@@ -469,7 +469,7 @@ class GildedRoseTest {
     Item element = new Item("Conjured",sellin, quality);
     GildedRose app = new GildedRose(new Item[] {element});
     app.updateQuality();
-    assertThat(element.quality, is(quality -4));
+    assertThat(element.quality, is(quality-4));
   }
   //test sur les items de conjured (quality <0, sellin = 0) quality decreases by 2
   @Test

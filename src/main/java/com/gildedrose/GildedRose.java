@@ -6,6 +6,7 @@ class GildedRose {
     static final String AGED_BRIE = "Aged Brie";
     static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
     static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
+    static final String CONJURED = "Conjured";
 
     public GildedRose(Item[] items) {
         this.items = items;
@@ -60,7 +61,19 @@ class GildedRose {
             }
         }
     }
-     private void updateDefault() {
+    private void updateConjured() {
+        for (int i = 0; i < items.length; i++) {
+            decreaseQuality(items[i]);
+            decreaseQuality(items[i]);
+            decreaseSellIn(items[i]);
+            if (items[i].sellIn < 0) {
+                decreaseQuality(items[i]);
+                decreaseQuality(items[i]);
+               
+            }
+        }
+    }
+    private void updateDefault() {
         for (int i = 0; i < items.length; i++) {
             decreaseQuality(items[i]);
             decreaseSellIn(items[i]);
@@ -80,6 +93,9 @@ class GildedRose {
                     break;
                 case BACKSTAGE_PASSES:
                     updateBackstagePasses();
+                    break;
+                case CONJURED:
+                    updateConjured();
                     break;
                 default:
                     updateDefault();
