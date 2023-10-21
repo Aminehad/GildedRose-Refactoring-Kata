@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="39" skipped="0" failures="0" errors="0" timestamp="2023-10-21T14:33:08" hostname="AMINESPC" time="0.088">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="39" skipped="0" failures="0" errors="0" timestamp="2023-10-21T14:44:20" hostname="AMINESPC" time="0.144">
   <properties/>
-  <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.021"/>
-  <testcase name="Test that quality positive, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.025"/>
+  <testcase name="Test that quality positive, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="agedBrieQualitytestThree()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality negative, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality negative, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality negatif, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.006"/>
-  <testcase name="Test that quality positive, sellin negative,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.007"/>
+  <testcase name="Test that quality positive, sellin negative,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality negative, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="backstagePassesQuality10()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="backstagePassesQuality11()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test that quality positive, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality negatif, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality positive, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="BACKSTAGEQualitytestFour()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="BACKSTAGEQualitytestFour()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstagePassesQuality3()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstagePassesQuality4()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test tooString" classname="com.gildedrose.GildedRoseTest" time="0.048"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="backstagePassesQuality3()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="backstagePassesQuality4()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test tooString" classname="com.gildedrose.GildedRoseTest" time="0.017"/>
-  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="Test that quality negatif, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality negatif, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality negatif, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="Test that quality positive, sellin negative,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
