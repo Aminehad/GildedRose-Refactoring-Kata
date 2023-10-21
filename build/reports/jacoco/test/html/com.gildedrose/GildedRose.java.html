@@ -6,62 +6,94 @@ class GildedRose {
     static final String AGED_BRIE = &quot;Aged Brie&quot;;
     static final String SULFURAS = &quot;Sulfuras, Hand of Ragnaros&quot;;
     static final String BACKSTAGE_PASSES = &quot;Backstage passes to a TAFKAL80ETC concert&quot;;
-
-<span class="fc" id="L10">    public GildedRose(Item[] items) {</span>
-<span class="fc" id="L11">        this.items = items;</span>
-<span class="fc" id="L12">    }</span>
-
-    public void updateQuality() {
-<span class="fc bfc" id="L15" title="All 2 branches covered.">        for (int i = 0; i &lt; items.length; i++) {</span>
-<span class="fc bfc" id="L16" title="All 2 branches covered.">            if (!items[i].name.equals(&quot;Aged Brie&quot;)</span>
-<span class="fc bfc" id="L17" title="All 2 branches covered.">                    &amp;&amp; !items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">                if (items[i].quality &gt; 0) {</span>
-<span class="fc bfc" id="L19" title="All 2 branches covered.">                    if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L20">                        items[i].quality = items[i].quality - 1;</span>
-                    }
-                }
-            } else {
-<span class="fc bfc" id="L24" title="All 2 branches covered.">                if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L25">                    items[i].quality = items[i].quality + 1;</span>
-
-<span class="fc bfc" id="L27" title="All 2 branches covered.">                    if (items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">                        if (items[i].sellIn &lt; 11) {</span>
-<span class="fc bfc" id="L29" title="All 2 branches covered.">                            if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L30">                                items[i].quality = items[i].quality + 1;</span>
-                            }
-                        }
-
-<span class="fc bfc" id="L34" title="All 2 branches covered.">                        if (items[i].sellIn &lt; 6) {</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">                            if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L36">                                items[i].quality = items[i].quality + 1;</span>
-                            }
-                        }
-                    }
-                }
-            }
-
-<span class="fc bfc" id="L43" title="All 2 branches covered.">            if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L44">                items[i].sellIn = items[i].sellIn - 1;</span>
-            }
-
-<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (items[i].sellIn &lt; 0) {</span>
-<span class="fc bfc" id="L48" title="All 2 branches covered.">                if (!items[i].name.equals(&quot;Aged Brie&quot;)) {</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">                    if (!items[i].name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)) {</span>
-<span class="fc bfc" id="L50" title="All 2 branches covered.">                        if (items[i].quality &gt; 0) {</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">                            if (!items[i].name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L52">                                items[i].quality = items[i].quality - 1;</span>
-                            }
-                        }
-                    } else {
-<span class="fc" id="L56">                        items[i].quality = items[i].quality - items[i].quality;</span>
-                    }
-                } else {
-<span class="fc bfc" id="L59" title="All 2 branches covered.">                    if (items[i].quality &lt; 50) {</span>
-<span class="fc" id="L60">                        items[i].quality = items[i].quality + 1;</span>
-                    }
-                }
+    static final String CONJURED = &quot;Conjured&quot;;
+<span class="nc" id="L10">    public GildedRose(Item[] items) {</span>
+<span class="nc" id="L11">        this.items = items;</span>
+<span class="nc" id="L12">    }</span>
+   
+    private void decreaseQuality(Item item) {
+<span class="nc bnc" id="L15" title="All 4 branches missed.">        if (item.quality &gt; 0 &amp;&amp; !item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
+<span class="nc" id="L16">            item.quality--;</span>
+        }
+<span class="nc" id="L18">    }</span>
+    private void increaseQuality(Item item) {
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        if (item.quality &lt; 50) {</span>
+<span class="nc" id="L21">            item.quality++;</span>
+        }
+<span class="nc" id="L23">    }</span>
+    private void decreaseSellIn(Item item) {
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        if (!item.name.equals(SULFURAS)) {</span>
+<span class="nc" id="L26">            item.sellIn--;</span>
+        }
+<span class="nc" id="L28">    }</span>
+    
+    private void updateAgedBrie() {
+<span class="nc bnc" id="L31" title="All 2 branches missed.">        for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="nc" id="L32">            increaseQuality(items[i]);</span>
+<span class="nc" id="L33">            decreaseSellIn(items[i]);</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">            if (items[i].sellIn &lt; 0) {</span>
+<span class="nc" id="L35">                increaseQuality(items[i]);</span>
             }
         }
-<span class="fc" id="L65">    }</span>
-}
+<span class="nc" id="L38">    }</span>
+    private void updateBackstagePasses() {
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="nc" id="L41">            increaseQuality(items[i]);</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">            if (items[i].sellIn &lt; 11) {</span>
+<span class="nc" id="L43">                increaseQuality(items[i]);</span>
+            }
+<span class="nc bnc" id="L45" title="All 2 branches missed.">            if (items[i].sellIn &lt; 6) {</span>
+<span class="nc" id="L46">                increaseQuality(items[i]);</span>
+            }
+<span class="nc" id="L48">            decreaseSellIn(items[i]);</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            if (items[i].sellIn &lt; 0) {</span>
+<span class="nc" id="L50">                items[i].quality = items[i].quality - items[i].quality;</span>
+            }
+        }
+<span class="nc" id="L53">    }</span>
+    private void updateConjured() {
+<span class="nc bnc" id="L55" title="All 2 branches missed.">        for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="nc" id="L56">            decreaseQuality(items[i]);</span>
+<span class="nc" id="L57">            decreaseQuality(items[i]);</span>
+<span class="nc" id="L58">            decreaseSellIn(items[i]);</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">            if (items[i].sellIn &lt; 0) {</span>
+<span class="nc" id="L60">                decreaseQuality(items[i]);</span>
+<span class="nc" id="L61">                decreaseQuality(items[i]);</span>
+               
+            }
+        }
+<span class="nc" id="L65">    }</span>
+    private void updateDefault() {
+<span class="nc bnc" id="L67" title="All 2 branches missed.">        for (int i = 0; i &lt; items.length; i++) {</span>
+<span class="nc" id="L68">            decreaseQuality(items[i]);</span>
+<span class="nc" id="L69">            decreaseSellIn(items[i]);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if (items[i].sellIn &lt; 0) {</span>
+<span class="nc" id="L71">                decreaseQuality(items[i]);</span>
+            }
+        }
+<span class="nc" id="L74">    }   </span>
+    
+    
+public void updateQuality() {
+<span class="nc bnc" id="L78" title="All 2 branches missed.">        for(Item item : items) {</span>
+<span class="nc bnc" id="L79" title="All 5 branches missed.">            switch (item.name) {</span>
+                case AGED_BRIE:
+<span class="nc" id="L81">                    updateAgedBrie();</span>
+<span class="nc" id="L82">                    break;</span>
+                case SULFURAS:
+                   // updateSulfuras();
+<span class="nc" id="L85">                    break;</span>
+                case BACKSTAGE_PASSES:
+<span class="nc" id="L87">                    updateBackstagePasses();</span>
+<span class="nc" id="L88">                    break;</span>
+                case CONJURED:
+<span class="nc" id="L90">                    updateConjured();</span>
+<span class="nc" id="L91">                    break;</span>
+                default:
+<span class="nc" id="L93">                    updateDefault();</span>
+                    break;
+            }
+        }
+<span class="nc" id="L97">        }</span>
+    }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

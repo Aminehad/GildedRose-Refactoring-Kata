@@ -11,6 +11,7 @@ class GildedRose {
         this.items = items;
     }
    
+
     private void decreaseQuality(Item item) {
         if (item.quality > 0 && !item.name.equals("Sulfuras, Hand of Ragnaros")) {
             item.quality--;
@@ -53,14 +54,21 @@ class GildedRose {
     }
     private void updateConjured() {
         for (int i = 0; i < items.length; i++) {
-            decreaseQuality(items[i]);
-            decreaseQuality(items[i]);
-            decreaseSellIn(items[i]);
+           
             if (items[i].sellIn < 0) {
+                decreaseQuality(items[i]);
+                decreaseQuality(items[i]);
                 decreaseQuality(items[i]);
                 decreaseQuality(items[i]);
                
             }
+            else{
+                decreaseQuality(items[i]);
+                decreaseQuality(items[i]);
+
+            }           
+             decreaseSellIn(items[i]);
+
         }
     }
     private void updateDefault() {
@@ -72,9 +80,7 @@ class GildedRose {
             }
         }
     }   
-    
-    
-public void updateQuality() {
+    public void updateQuality() {
         for(Item item : items) {
             switch (item.name) {
                 case AGED_BRIE:
