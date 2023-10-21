@@ -1,45 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="39" skipped="0" failures="0" errors="0" timestamp="2023-10-21T14:44:20" hostname="AMINESPC" time="0.144">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="42" skipped="0" failures="2" errors="0" timestamp="2023-10-21T15:10:24" hostname="AMINESPC" time="0.152">
   <properties/>
-  <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.025"/>
+  <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.044"/>
   <testcase name="Test that quality positive, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="agedBrieQualitytestThree()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality negative, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="agedBrieQualitytestThree()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality negative, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality decreases by 2" classname="com.gildedrose.GildedRoseTest" time="0.01">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expected: is &lt;28&gt;&#13;&#10;     but: was &lt;29&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: is &lt;28&gt;
+     but: was &lt;29&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at com.gildedrose.GildedRoseTest.conjuredItemSellintestP(GildedRoseTest.java:461)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:515)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
   <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality negatif, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.007"/>
+  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.008"/>
   <testcase name="Test that quality positive, sellin negative,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality negative, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that the name is unchanged" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality decreases by 4" classname="com.gildedrose.GildedRoseTest" time="0.0">
+    <failure message="java.lang.AssertionError: &#13;&#10;Expected: is &lt;26&gt;&#13;&#10;     but: was &lt;28&gt;" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected: is &lt;26&gt;
+     but: was &lt;28&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at com.gildedrose.GildedRoseTest.conjuredItemSellintestP2(GildedRoseTest.java:472)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:515)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:171)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:167)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:114)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:59)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:110)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:72)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:71)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy2/jdk.proxy2.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="Test that quality decreases by 2" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality decreases by 1" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="backstagePassesQuality10()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="backstagePassesQuality10()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="backstagePassesQuality11()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <testcase name="Test that quality positive, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality negatif, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality positive, sellin positive, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality positive, sellin negative, basic item" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality  doesn change" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality increment de 1" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality positive, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="BACKSTAGEQualitytestFour()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="BACKSTAGEQualitytestFour()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="backstagePassesQuality3()" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="backstagePassesQuality4()" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test tooString" classname="com.gildedrose.GildedRoseTest" time="0.048"/>
+  <testcase name="Test tooString" classname="com.gildedrose.GildedRoseTest" time="0.033"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <testcase name="Test that quality positive, sellin positive,Backstage passes" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
+  <testcase name="Test that quality ne change pas" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality negatif, sellin positive,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
   <testcase name="Test that quality negatif, sellin negatif,Sulfuras" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality = 0" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
-  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
-  <testcase name="Test that quality positive, sellin negative,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality increases by 2" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="Test that quality positive, sellin positive,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="Test that quality positive, sellin negative,agedBrie" classname="com.gildedrose.GildedRoseTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -385,7 +385,7 @@ class GildedRoseTest {
   }
   //test sur les items de basique item (quality = 0 ) quality ne change pas
   @Test
-  @DisplayName("Test that quality = 0")
+  @DisplayName("Test that quality ne change pas")
   void  SulfurasQualitytestFive() {
     int quality=0;
     int sellin=8;
@@ -394,7 +394,7 @@ class GildedRoseTest {
     app.updateQuality();
     assertThat(element.quality, is(quality ));
   }
-  //test sur les items de basique (quality = 0 ) sellin ne change pas
+  //test sur les items de basique (quality = 0 ) sellin decreases by 1
   @Test
   @DisplayName("Test that quality = 0")
   void  SulfurasSellintestFive() {
@@ -407,7 +407,7 @@ class GildedRoseTest {
   }
   //test sur les items de backstage (sellin = 11) quality increases by 1
   @Test
-  @DisplayName("Test that quality = 0")
+  @DisplayName("Test that quality increment de 1")
   void  SulfurasSellintestSix() {
     int quality=30;
     int sellin=11;
@@ -418,7 +418,7 @@ class GildedRoseTest {
   }
     //test sur les items de backstage (sellin = 6) quality increases by 2
   @Test
-  @DisplayName("Test that quality = 0")
+  @DisplayName("Test that quality increases by 2")
   void  SulfurasSellintestseven() {
     int quality=30;
     int sellin=6;
@@ -427,9 +427,9 @@ class GildedRoseTest {
     app.updateQuality();
     assertThat(element.quality  , is(quality +2));
   }
-// test sur les items basique (quality =0 , sellin = 0 ) quality increases by 1
+// test sur les items basique (quality =0 , sellin = 0 ) quality ne change pas
  @Test
-  @DisplayName("Test that quality = 0")
+  @DisplayName("Test that quality  doesn change")
   void  BasicItemSellintestP() {
     int quality=0;
     int sellin=0;
@@ -438,9 +438,9 @@ class GildedRoseTest {
     app.updateQuality();
     assertThat(element.quality, is(quality ));
   }
-  // test sur les items basique (quality =0 , sellin = 0 ) sellin decreases by 1
+  // test sur les items basique (quality =0 , sellin = 1) quality decreases by 1
   @Test
-  @DisplayName("Test that quality = 0")
+  @DisplayName("Test that quality decreases by 1")
   void  BasicItemSellintestP2() {
     int quality=30;
     int sellin=1;
@@ -449,5 +449,40 @@ class GildedRoseTest {
     app.updateQuality();
     assertThat(element.quality, is(quality -1));
   }
+  //test sur les items de conjured (quality >0, sellin positive) quality decreases by 2
+  @Test
+  @DisplayName("Test that quality decreases by 2 ")
+  void  conjuredItemSellintestP() {
+    int quality=30;
+    int sellin=1;
+    Item element = new Item("Conjured",sellin, quality);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+    assertThat(element.quality, is(quality -2));
+  }
+  //test sur les items de conjured (quality >0, sellin negative) quality decreases by 4
+  @Test
+  @DisplayName("Test that quality decreases by 4 ")
+  void  conjuredItemSellintestP2() {
+    int quality=30;
+    int sellin=-1;
+    Item element = new Item("Conjured",sellin, quality);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+    assertThat(element.quality, is(quality -4));
+  }
+  //test sur les items de conjured (quality <0, sellin = 0) quality decreases by 2
+  @Test
+  @DisplayName("Test that quality decreases by 2 ")
+  void  conjuredItemSellintestP3() {
+    int quality=1;
+    int sellin=0;
+    Item element = new Item("Conjured",sellin, quality);
+    GildedRose app = new GildedRose(new Item[] {element});
+    app.updateQuality();
+    assertThat(element.quality, is(0));
+  }
+  
+  
 
 }
